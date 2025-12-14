@@ -3,40 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SmartMeal | PAGE_TITLE</title>
+  <title>SmartMeal | Home</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>SmartMeal</h1>
-    <div class="burger">
-      <div></div>
-      <div></div>
-      <div></div>
+<header>
+  <h1>SmartMeal</h1>
+  <div class="burger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="planner.html">Planner</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Plan Your Meals Smart and Healthy</h2>
+    <p>SmartMeal helps you eat better, save time, and reduce food waste. Plan your week, track your nutrition, and explore hundreds of healthy recipes.</p>
+    <button id="getStarted">Get Started</button>
+  </section>
+
+  <section class="banner">
+    <button id="changeImg">Change Image</button>
+  </section>
+
+  <section class="container">
+    <h2>Why Choose SmartMeal?</h2>
+    <p>Eating healthy doesn’t have to be complicated. SmartMeal gives you all the tools you need to create balanced meals and enjoy delicious food every day.</p>
+    <ul>
+      <li><strong>Save Time:</strong> Plan your weekly meals in minutes.</li>
+      <li><strong>Eat Healthy:</strong> Access nutrition info for each recipe.</li>
+      <li><strong>Reduce Waste:</strong> Optimize shopping lists and leftovers.</li>
+      <li><strong>Track Progress:</strong> Log meals and monitor your goals.</li>
+    </ul>
+
+    <h2>Featured Meals</h2>
+    <div class="gallery">
+      <img src="images/placeholder1.jpg" alt="Meal 1">
+      <img src="images/placeholder2.jpg" alt="Meal 2">
+      <img src="images/placeholder1.jpg" alt="Meal 3">
+      <img src="images/placeholder2.jpg" alt="Meal 4">
     </div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="recipes.html">Recipes</a>
-      <a href="planner.html">Planner</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  </section>
 
-  <!-- Main Content -->
-  <main>
-    PAGE_CONTENT
-  </main>
+  <section class="container">
+    <h2>Tips for Healthy Eating</h2>
+    <p>Follow these tips to maintain a balanced diet effortlessly:</p>
+    <ol>
+      <li>Include a variety of fruits and vegetables daily.</li>
+      <li>Choose whole grains over refined carbs.</li>
+      <li>Incorporate lean proteins like chicken, fish, tofu, and legumes.</li>
+      <li>Limit sugar and processed foods.</li>
+      <li>Stay hydrated and drink plenty of water.</li>
+    </ol>
+  </section>
+</main>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 SmartMeal. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>© 2025 SmartMeal. All rights reserved.</p>
+</footer>
 
-  <!-- JS -->
-  <script src="js/script.js" defer></script>
-
+<script src="js/script.js" defer></script>
 </body>
 </html>
