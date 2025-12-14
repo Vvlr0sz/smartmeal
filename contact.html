@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartMeal | Contact</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
   <h1>SmartMeal</h1>
-  <nav>
+  <div class="burger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <nav class="nav-links">
     <a href="index.html">Home</a>
     <a href="recipes.html">Recipes</a>
     <a href="planner.html">Planner</a>
@@ -18,14 +24,37 @@
   </nav>
 </header>
 
-<section>
-  <h2>Contact Us</h2>
-  <form>
-    <input type="text" placeholder="Your name"><br><br>
-    <input type="email" placeholder="Your email"><br><br>
-    <button>Send</button>
-  </form>
-</section>
+<main>
+  <section class="container">
+    <h2>Contact Us</h2>
+    <p>If you have questions, suggestions, or feedback, we'd love to hear from you. Reach out via the form below or connect with us on social media.</p>
 
+    <form>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <h3>Other Ways to Contact Us</h3>
+    <ul>
+      <li>Email: support@smartmeal.com</li>
+      <li>Phone: +1 (555) 123-4567</li>
+      <li>Follow us on social media: Facebook, Instagram, Twitter</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 SmartMeal. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js" defer></script>
 </body>
 </html>
