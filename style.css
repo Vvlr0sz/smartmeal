@@ -1,132 +1,59 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Base */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #fafafa;
-  color: #333;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Header & Navbar */
-header {
-  background: #fff;
-  padding: 10px 20px;
-  border-bottom: 2px solid #e2e2e2;
-}
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 18px;
-}
-.nav-links li a:hover {
-  color: #ff6f61;
-}
-
-/* Burger Menu (Mobile) */
+/* Бургер-меню */
 .burger {
   display: none;
   cursor: pointer;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
+  transition: transform 0.3s ease;
 }
 .burger div {
   width: 25px;
   height: 3px;
   background: #333;
+  transition: all 0.3s ease;
 }
 
-/* Banner Interactive */
-.banner {
-  width: 100%;
-  height: 350px;
-  background: url("../images/placeholder1.jpg") center/cover no-repeat;
+/* Анимация при открытом меню */
+.nav-links {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  gap: 18px;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  overflow: hidden;
 }
+.nav-links.active {
+  opacity: 1;
+  max-height: 500px; /* достаточно для всех пунктов меню */
+}
+
+/* Кнопка баннера */
 .banner button {
   position: absolute;
   bottom: 20px;
-  padding: 10px 20px;
-  background: rgba(255,255,255,0.8);
+  padding: 12px 24px;
+  background: rgba(255, 87, 34, 0.85);
+  color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.banner button:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 87, 34, 1);
 }
 
-/* Hero Section & Get Started Button */
-.hero {
-  text-align: center;
-  padding: 40px 20px;
-  background: #f5f5f5;
-}
-.hero h2 {
-  margin-bottom: 15px;
-}
-# getStarted, .hero button {
-  padding: 12px 24px;
+/* Кнопка Get Started */
+#getStarted {
+  padding: 12px 28px;
   background-color: #FF5722;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
-
-/* Containers */
-.container {
-  padding: 20px;
-}
-h1 {
-  margin-bottom: 10px;
-  color: #333;
-}
-
-/* Gallery */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
-  gap: 15px;
-}
-.gallery img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-/* Footer */
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 12px 0;
-  margin-top: 30px;
-}
-
-/* Media Queries */
-@media(max-width: 768px){
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background: #fff;
-    padding: 15px;
-  }
-  .burger {
-    display: flex;
-  }
+#getStarted:hover {
+  transform: translateY(-4px);
+  background-color: #E64A19;
 }
