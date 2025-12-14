@@ -2,26 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Recipes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartMeal | Recipes</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-  <h1>SmartMeal</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="recipes.html">Recipes</a>
-    <a href="planner.html">Planner</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <!-- Header -->
+  <header>
+    <h1>SmartMeal</h1>
+    <div class="burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="planner.html">Planner</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<section>
-  <h2>Recipes</h2>
-  <p>Find recipes based on ingredients you already have.</p>
-</section>
+  <!-- Main Content -->
+  <main>
+    <section class="container">
+      <h2>Healthy Recipes</h2>
+      <p>Discover a variety of delicious and healthy recipes to keep your meals exciting and nutritious.</p>
+
+      <div class="gallery">
+        <!-- Recipe 1 -->
+        <div class="recipe-card">
+          <img src="images/salad.jpg" alt="Quinoa Salad">
+          <h3>Quinoa & Veggie Salad</h3>
+          <p>A light and refreshing salad with quinoa, cherry tomatoes, cucumber, avocado, and a lemon vinaigrette.</p>
+        </div>
+
+        <!-- Recipe 2 -->
+        <div class="recipe-card">
+          <img src="images/grilled-chicken.jpg" alt="Grilled Chicken">
+          <h3>Grilled Chicken with Veggies</h3>
+          <p>Juicy grilled chicken breast served with a side of roasted broccoli, carrots, and bell peppers.</p>
+        </div>
+
+        <!-- Recipe 3 -->
+        <div class="recipe-card">
+          <img src="images/smoothie.jpg" alt="Berry Smoothie">
+          <h3>Berry Smoothie</h3>
+          <p>A creamy and antioxidant-rich smoothie made with blueberries, strawberries, banana, and almond milk.</p>
+        </div>
+
+        <!-- Recipe 4 -->
+        <div class="recipe-card">
+          <img src="images/omelette.jpg" alt="Veggie Omelette">
+          <h3>Veggie Omelette</h3>
+          <p>A fluffy omelette packed with spinach, mushrooms, tomatoes, and a sprinkle of feta cheese.</p>
+        </div>
+
+        <!-- Recipe 5 -->
+        <div class="recipe-card">
+          <img src="images/pasta.jpg" alt="Whole Wheat Pasta">
+          <h3>Whole Wheat Pasta Primavera</h3>
+          <p>Whole wheat pasta tossed with zucchini, bell peppers, cherry tomatoes, and a light garlic sauce.</p>
+        </div>
+
+        <!-- Recipe 6 -->
+        <div class="recipe-card">
+          <img src="images/chia-pudding.jpg" alt="Chia Pudding">
+          <h3>Chia Seed Pudding</h3>
+          <p>A creamy pudding made from chia seeds soaked in almond milk, topped with fresh berries and a drizzle of honey.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SmartMeal. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/script.js" defer></script>
 
 </body>
 </html>
