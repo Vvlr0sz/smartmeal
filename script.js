@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (burger && navLinks) {
     burger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
-      // Анимация бургер-иконки
-      burger.classList.toggle('toggle');
+      burger.classList.toggle('toggle'); // анимация крестик
     });
   }
 
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       current = current === 1 ? 2 : 1;
       banner.style.backgroundImage = `url('../images/placeholder${current}.jpg')`;
-      // Плавное появление
       banner.style.transition = 'background-image 0.5s ease-in-out';
     });
   }
@@ -32,9 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     getStartedBtn.addEventListener('click', () => {
       window.location.href = 'planner.html';
     });
-  }
-
-});
   }
 
 });
