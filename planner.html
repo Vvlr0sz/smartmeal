@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Meal Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartMeal | Planner</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
   <h1>SmartMeal</h1>
-  <nav>
+  <div class="burger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <nav class="nav-links">
     <a href="index.html">Home</a>
     <a href="recipes.html">Recipes</a>
     <a href="planner.html">Planner</a>
@@ -18,11 +24,34 @@
   </nav>
 </header>
 
-<section>
-  <h2>Weekly Meal Planner</h2>
-  <p>Plan your meals for the week.</p>
-  <button>Create Shopping List</button>
-</section>
+<main>
+  <section class="container">
+    <h2>Meal Planner</h2>
+    <p>Plan your meals for the week and stay on track with your nutrition goals. Our planner helps you organize breakfast, lunch, dinner, and snacks efficiently.</p>
 
+    <h3>How to Use the Planner:</h3>
+    <ul>
+      <li>Choose meals for each day of the week.</li>
+      <li>Adjust portions according to your dietary needs.</li>
+      <li>Automatically generate a shopping list.</li>
+      <li>Track calories, macros, and nutrients.</li>
+    </ul>
+
+    <h3>Sample Weekly Plan:</h3>
+    <ol>
+      <li><strong>Monday:</strong> Quinoa Salad, Grilled Chicken, Berry Smoothie</li>
+      <li><strong>Tuesday:</strong> Veggie Omelette, Whole Wheat Pasta Primavera</li>
+      <li><strong>Wednesday:</strong> Chia Pudding, Grilled Fish with Veggies</li>
+      <li><strong>Thursday:</strong> Chicken Stir-Fry, Green Smoothie</li>
+      <li><strong>Friday:</strong> Lentil Soup, Roasted Veggie Bowl</li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 SmartMeal. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js" defer></script>
 </body>
 </html>
