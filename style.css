@@ -1,48 +1,88 @@
-/* Бургер-меню */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #fafafa;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header & Navbar */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px 20px;
+  border-bottom: 2px solid #e2e2e2;
+  position: relative;
+}
+header h1 {
+  font-size: 1.8rem;
+}
+.nav-links {
+  display: flex;
+  gap: 18px;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+.nav-links a {
+  padding: 6px 10px;
+}
+.nav-links a:hover {
+  color: #ff6f61;
+}
+
+/* Burger Menu */
 .burger {
   display: none;
   cursor: pointer;
   flex-direction: column;
   gap: 5px;
-  transition: transform 0.3s ease;
+  width: 25px;
+  height: 20px;
+  justify-content: space-between;
 }
 .burger div {
-  width: 25px;
+  width: 100%;
   height: 3px;
   background: #333;
+  border-radius: 2px;
   transition: all 0.3s ease;
 }
-
-/* Анимация при открытом меню */
-.nav-links {
-  display: flex;
-  gap: 18px;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-  overflow: hidden;
+.burger.toggle div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
 }
-.nav-links.active {
-  opacity: 1;
-  max-height: 500px; /* достаточно для всех пунктов меню */
+.burger.toggle div:nth-child(2) {
+  opacity: 0;
+}
+.burger.toggle div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Кнопка баннера */
-.banner button {
-  position: absolute;
-  bottom: 20px;
-  padding: 12px 24px;
-  background: rgba(255, 87, 34, 0.85);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.3s ease;
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f5f5f5;
 }
-.banner button:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 87, 34, 1);
+.hero h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
 }
-
-/* Кнопка Get Started */
+.hero p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
 #getStarted {
   padding: 12px 28px;
   background-color: #FF5722;
@@ -56,4 +96,86 @@
 #getStarted:hover {
   transform: translateY(-4px);
   background-color: #E64A19;
+}
+
+/* Banner Section */
+.banner {
+  width: 100%;
+  height: 350px;
+  background: url("../images/placeholder1.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.banner button {
+  position: absolute;
+  bottom: 20px;
+  padding: 12px 24px;
+  background: rgba(255,87,34,0.85);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.banner button:hover {
+  transform: translateY(-3px);
+  background: rgba(255,87,34,1);
+}
+
+/* Containers */
+.container {
+  padding: 40px 20px;
+}
+h1, h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* Media Queries */
+@media(max-width: 768px){
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    padding: 15px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+  }
+  .burger {
+    display: flex;
+  }
+  .nav-links.active {
+    display: flex;
+  }
 }
